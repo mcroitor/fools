@@ -14,9 +14,14 @@ $(TARGET): $(OBJS)
 	$(CXX) $(OBJS) -o $(TARGET)
 
 # Regula pentru a transforma orice .cpp in .o
+DEPFLAGS = -MMD -MP
+DEPS = $(OBJS:.o=.d)
+
 %.o: %.cpp
-	$(CXX) -c $< -o $@
+	$(CXX) $(DEPFLAGS) -c $< -o $@
+
+-include $(DEPS)
 
 # Curata fisierele generate
 clean:
-	rm -f *.o $(TARGET) $(TARGET).exe
+	rm -f *.o *.d $(TARGET) $(TARGET).exe

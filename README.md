@@ -19,3 +19,17 @@ Deoarece codul este scris în C++, am grupat datele și funcțiile asociate lor 
 - **Listener**: Preia comenzile de la tastatură ale jucătorului (ce carte dorește să joace).
 
 *Notă: Acest proiect a fost realizat cu asistența unui LLM. Detaliile interacțiunii se află în fișierul `prompts.md`.*
+
+## Cum se construiește (compilează) proiectul
+
+Acest proiect folosește compilatorul `g++`. Pentru a construi proiectul din linia de comandă, aveți la dispoziție următoarele metode:
+
+**Utilizând Makefile:**
+Rulați comanda în terminalul din rădăcina proiectului:
+`make`
+Acest lucru va genera executabilul jocului. Pentru a curăța fișierele generate, rulați `make clean`.
+
+**Utilizând scriptul Windows (build.cmd):**
+Rulați în linia de comandă (CMD):
+`build.cmd`
+Fișierul va compila automat fiecare fișier `.cpp` într-un fișier obiect și le va lega (link) în executabilul `fools.exe`.

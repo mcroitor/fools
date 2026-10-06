@@ -15,6 +15,8 @@ struct GameEngine {
     Renderer renderer;
     Listener listener;
 
+    GameEngine() = default;
+    
     // Metodele care dicteaza regulile si fluxul jocului
     void initializeDeck();
     void shuffleDeck();

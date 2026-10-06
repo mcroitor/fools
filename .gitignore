@@ -1,0 +1,8 @@
+# Fisiere obiect
+*.o
+*.obj
+
+# Fisiere executabile
+*.exe
+*.out
+fools
